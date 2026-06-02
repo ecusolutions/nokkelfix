@@ -52,7 +52,7 @@
             <p class="text-xl md:text-2xl text-stone-400 mb-12 leading-relaxed max-w-3xl mx-auto">
                 <span class="font-semibold text-stone-200">Vi spesialiserer oss nå på bilnøkler, feilsøking og mer.</span><br>
                 Vi har utstyr til å gjøre både nøkkelprogrammering og ECU/TCU-jobber.
-                Vi har også utstyr til å gjøre recovery av FRM-moduler i BMW som er kjent for å bli korrupte. Har du problemer med å låse bil, åpne og lukke vindu, lysstyring og en del varsler i dashbordet, er det som regel FRM-modulen i bmw som er problemet. 
+                Vi har også utstyr til å gjøre recovery av FRM-moduler i BMW som er kjent for å bli korrupte. Har du problemer med å låse bil, åpne og lukke vindu, lysstyring og en del varsler i dashbordet, er det som regel FRM-modulen som er problemet.
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -81,26 +81,61 @@
         </div>
     </section>
 
-    <section id="kontakt" class="py-24 px-4 bg-stone-950">
+    <section class="py-24 px-4 bg-stone-950 border-t border-stone-900">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-stone-50 mb-4 text-center tracking-tight">Prisliste</h2>
+            <p class="text-stone-400 text-center mb-12 max-w-xl mx-auto">Vennligst merk at de fleste priser er veiledende startpriser. Ta kontakt for et nøyaktig pristilbud til akkurat din bil.</p>
+            
+            <div class="bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden shadow-xl">
+                <div class="divide-y divide-stone-800">
+                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
+                        <span class="font-medium text-stone-200">FRM Modul reparasjon (BMW)</span>
+                        <span class="font-bold text-emerald-400 bg-emerald-950/50 border border-emerald-900/50 px-4 py-1.5 rounded-xl text-sm">3 000,- kr (Fastpris)</span>
+                    </div>
+                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
+                        <span class="font-medium text-stone-200">Ekstra nøkkel med programmering</span>
+                        <span class="font-semibold text-stone-300">Fra 2 500,- kr</span>
+                    </div>
+                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
+                        <span class="font-medium text-stone-200">Mistet siste nøkkel (Helt tom for nøkler)</span>
+                        <span class="font-semibold text-stone-300">Fra 2 500,- kr</span>
+                    </div>
+                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
+                        <span class="font-medium text-stone-200">ECU / TCU jobb (Kloning, feilsøking o.l.)</span>
+                        <span class="font-semibold text-stone-300">Fra 2 500,- kr</span>
+                    </div>
+                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
+                        <span class="font-medium text-stone-200">Tilbakestilling til original programvare</span>
+                        <span class="font-semibold text-stone-300">Fra 2 500,- kr</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-stone-500 italic mt-4 text-center">
+                * Siden oppbygning, elektronikk og tidsbruk varierer veldig fra bil til bil, er prisene oppgitt som "fra-priser" (med unntak av FRM-reparasjon).
+            </p>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-24 px-4 bg-stone-900 border-t border-stone-800">
         <div class="max-w-xl mx-auto">
             <h2 class="text-4xl font-extrabold text-stone-50 mb-16 text-center tracking-tight">Få et uforpliktende pristilbud</h2>
             
-            <form action="https://formspree.io/f/mqazqazl" method="POST" class="space-y-8 bg-stone-900 border border-stone-800 rounded-3xl p-10 shadow-2xl">
+            <form action="https://formspree.io/f/mqazqazl" method="POST" class="space-y-8 bg-stone-950 border border-stone-800 rounded-3xl p-10 shadow-2xl">
                 <input type="hidden" name="_to" value="ecuhjelpen@gmail.com">
 
                 <div>
                     <label for="name" class="block text-sm font-semibold text-stone-300 mb-2">Ditt Navn:</label>
-                    <input type="text" id="name" name="name" required class="w-full bg-stone-800 border border-stone-700 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
+                    <input type="text" id="name" name="name" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
                 </div>
 
                 <div>
                     <label for="car-info" class="block text-sm font-semibold text-stone-300 mb-2">Bil (Merke, Modell, Årsmodell, Gjerne RegNr):</label>
-                    <input type="text" id="car-info" name="car-info" required class="w-full bg-stone-800 border border-stone-700 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
+                    <input type="text" id="car-info" name="car-info" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
                 </div>
 
                 <div>
                     <label for="request-type" class="block text-sm font-semibold text-stone-300 mb-2">Hva gjelder saken?</label>
-                    <select id="request-type" name="request-type" required class="w-full bg-stone-800 border border-stone-700 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
+                    <select id="request-type" name="request-type" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
                         <option value="" disabled selected>Velg fra listen...</option>
                         <option value="ekstranokkel">Trenger en ekstra nøkkel</option>
                         <option value="taptnokkel">Mistet siste nøkkel</option>
@@ -113,7 +148,7 @@
 
                 <div>
                     <label for="message" class="block text-sm font-semibold text-stone-300 mb-2">Beskrivelse av oppdraget:</label>
-                    <textarea id="message" name="message" rows="6" class="w-full bg-stone-800 border border-stone-700 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors" placeholder="Skriv inn detaljer her..."></textarea>
+                    <textarea id="message" name="message" rows="6" class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors" placeholder="Skriv inn detaljer her..."></textarea>
                 </div>
 
                 <button type="submit" class="w-full inline-flex items-center justify-center gap-3 bg-emerald-600 text-stone-950 font-bold px-12 py-5 rounded-xl text-lg hover:bg-emerald-500 transition-colors shadow-xl">
