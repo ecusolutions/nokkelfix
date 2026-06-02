@@ -86,11 +86,18 @@
             <h2 class="text-4xl font-extrabold text-stone-50 mb-4 text-center tracking-tight">Prisliste</h2>
             <p class="text-stone-400 text-center mb-12 max-w-xl mx-auto">Vennligst merk at de fleste priser er veiledende startpriser. Ta kontakt for et nøyaktig pristilbud til akkurat din bil.</p>
             
-            <div class="bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden shadow-xl">
+            <div class="bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden shadow-xl mb-12">
                 <div class="divide-y divide-stone-800">
                     <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
                         <span class="font-medium text-stone-200">FRM Modul reparasjon (BMW)</span>
                         <span class="font-bold text-emerald-400 bg-emerald-950/50 border border-emerald-900/50 px-4 py-1.5 rounded-xl text-sm">3 000,- kr (Fastpris)</span>
+                    </div>
+                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
+                        <div>
+                            <span class="font-medium text-stone-200 block">Diagnose & Feilsøking</span>
+                            <span class="text-xs text-stone-400 block mt-0.5">Enkel avlesning 600,- kr. Livedata og avansert feilsøking øker i pris etter tidsbruk.</span>
+                        </div>
+                        <span class="font-semibold text-stone-300 shrink-0 ml-4">Fra 600,- kr</span>
                     </div>
                     <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
                         <span class="font-medium text-stone-200">Ekstra nøkkel med programmering</span>
@@ -110,7 +117,24 @@
                     </div>
                 </div>
             </div>
-            <p class="text-xs text-stone-500 italic mt-4 text-center">
+
+            <div class="bg-gradient-to-r from-stone-900 to-stone-850 border border-stone-800 rounded-3xl p-8 shadow-xl text-center sm:text-left sm:flex sm:items-center sm:justify-between gap-6">
+                <div class="mb-6 sm:mb-0">
+                    <h3 class="text-xl font-bold text-stone-100 mb-2 flex items-center justify-center sm:justify-start gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-500"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v11h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M13 17H9"/><path d="M14 10h-4"/></svg>
+                        Møt oss der du står? Vi kjører ut!
+                    </h3>
+                    <p class="text-sm text-stone-400 leading-relaxed max-w-xl">
+                        Står du fast eller har mistet den siste nøkkelen? Vi tilbyr utkjøring til din lokasjon. Prisen avhenger av avstand, kjøretid og oppdragets omfang.
+                    </p>
+                </div>
+                <div class="shrink-0">
+                    <span class="block text-xs uppercase tracking-wider text-stone-500 font-semibold mb-1">Utkjøringsgebyr</span>
+                    <span class="text-2xl font-black text-emerald-400 block">Fra 400,- kr</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-stone-500 italic mt-6 text-center">
                 * Siden oppbygning, elektronikk og tidsbruk varierer veldig fra bil til bil, er prisene oppgitt som "fra-priser" (med unntak av FRM-reparasjon).
             </p>
         </div>
@@ -137,6 +161,7 @@
                     <label for="request-type" class="block text-sm font-semibold text-stone-300 mb-2">Hva gjelder saken?</label>
                     <select id="request-type" name="request-type" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
                         <option value="" disabled selected>Velg fra listen...</option>
+                        <option value="diagnose">Diagnose / Feilsøking</option>
                         <option value="ekstranokkel">Trenger en ekstra nøkkel</option>
                         <option value="taptnokkel">Mistet siste nøkkel</option>
                         <option value="frm-reparasjon">FRM Modul reparasjon, 3000,- Kr.</option>
