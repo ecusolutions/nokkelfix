@@ -41,8 +41,7 @@
         <a href="https://maps.google.com" target="_blank"
            class="inline-flex items-center gap-2 text-stone-400 bg-stone-900 border border-stone-800 rounded-full px-5 py-2 mb-10">
 
-            <span class="text-emerald-400">📍</span>
-            Basert i <span class="font-bold blinking-location ml-1">HAUGESUND & OMEGN</span>
+            📍 <span class="font-bold blinking-location">HAUGESUND & OMEGN</span>
         </a>
 
         <h1 class="text-6xl md:text-7xl font-bold text-white mb-6">
@@ -50,7 +49,7 @@
         </h1>
 
         <p class="text-xl text-stone-400 max-w-3xl mx-auto mb-10">
-            Bilnøkler, ECU/TCU programmering, feilsøking og nøkkelservice
+            Bilnøkler, ECU/TCU programmering og avansert feilsøking
         </p>
 
         <div class="flex gap-4 justify-center flex-wrap">
@@ -73,33 +72,35 @@
             Hva vi kan tilby
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-12 text-stone-300 text-lg">
+        <div class="grid md:grid-cols-2 gap-12 text-lg text-stone-300 leading-relaxed">
 
             <div>
                 <p class="mb-6">
                     Vi i <strong>ECU Solutions Haugesund</strong> satser tungt på bilnøkler fremover.
-                    Vi kan tilby veldig billige løsninger, men alt varierer av bil, ønske og oppbygning.
+                    Vi tilbyr løsninger tilpasset bil, system og kompleksitet.
                 </p>
 
                 <p class="mb-6">
-                    For noen biler må flere moduler ut for å programmeres på benk,
-                    mens andre løses rett gjennom OBD-porten.
-                    Vi bruker profesjonelt utstyr som <strong>AUTEL IM & XP400 PRO</strong>
-                    og <strong>Lonsdor K518pro & Kprog2</strong>.
+                    Noen biler krever benk-programmering, andre kan gjøres via OBD.
+                    Vi bruker profesjonelt utstyr som
+                    <strong>AUTEL IM & XP400 PRO</strong> og
+                    <strong>Lonsdor K518pro & Kprog2</strong>.
                 </p>
             </div>
 
             <div>
                 <p class="mb-6">
-                    Vi har erfaring med TCU cloning, ECU-jobber og avansert diagnose.
+                    Vi har erfaring med ECU, TCU cloning, nøkkelprogrammering og avansert diagnose.
                 </p>
 
                 <p class="mb-6">
-                    Vi kan også tilbakestille systemer til original stand.
-                    Leveringstid varierer siden vi ikke har fast delelager.
+                    Vi tilbyr også tilbakestilling til original software og elektronikkservice.
+                    Leveringstid kan variere siden vi ikke har fast lager.
                 </p>
 
-             
+                <p class="text-sm text-stone-500 italic mt-6">
+                    * Alle priser er “fra-priser” grunnet variasjon i bil og kompleksitet.
+                </p>
             </div>
 
         </div>
@@ -111,27 +112,34 @@
     <div class="max-w-xl mx-auto">
 
         <h2 class="text-4xl font-bold text-white text-center mb-12">
-            Få tilbud
+            Få et uforpliktende tilbud
         </h2>
 
         <form action="https://formspree.io/f/xbdlnobn" method="POST"
               class="space-y-5 bg-stone-900 border border-stone-800 p-8 rounded-3xl">
 
-            <input name="name" placeholder="Navn" required class="w-full p-3 bg-stone-950 rounded-lg">
+            <input name="name" required placeholder="Navn"
+                   class="w-full p-3 bg-stone-950 rounded-lg text-white">
 
-            <input name="regnr" placeholder="Regnr (anbefalt)" class="w-full p-3 bg-stone-950 rounded-lg">
+            <!-- EMAIL (KRITISK) -->
+            <input type="email" name="email" required placeholder="E-post (påkrevd)"
+                   class="w-full p-3 bg-stone-950 rounded-lg text-white border border-stone-700 focus:border-emerald-500">
 
-            <input name="car" placeholder="Bil (merke/modell/år/motor)" required class="w-full p-3 bg-stone-950 rounded-lg">
+            <input name="regnr" placeholder="Regnr (anbefalt)"
+                   class="w-full p-3 bg-stone-950 rounded-lg text-white">
+
+            <input name="car" required placeholder="Bil (merke/modell/år/motor)"
+                   class="w-full p-3 bg-stone-950 rounded-lg text-white">
 
             <div class="grid grid-cols-2 gap-4">
 
-                <select name="keyless_start" required class="p-3 bg-stone-950 rounded-lg">
+                <select name="keyless_start" required class="p-3 bg-stone-950 rounded-lg text-white">
                     <option disabled selected>Keyless start</option>
                     <option>Ja</option>
                     <option>Nei</option>
                 </select>
 
-                <select name="keyless_entry" required class="p-3 bg-stone-950 rounded-lg">
+                <select name="keyless_entry" required class="p-3 bg-stone-950 rounded-lg text-white">
                     <option disabled selected>Keyless entry</option>
                     <option>Ja</option>
                     <option>Nei</option>
@@ -139,9 +147,10 @@
 
             </div>
 
-            <input name="fccid" placeholder="FCC ID (valgfritt)" class="w-full p-3 bg-stone-950 rounded-lg">
+            <input name="fccid" placeholder="FCC ID (valgfritt)"
+                   class="w-full p-3 bg-stone-950 rounded-lg text-white">
 
-            <select name="request" class="w-full p-3 bg-stone-950 rounded-lg" required>
+            <select name="request" required class="w-full p-3 bg-stone-950 rounded-lg text-white">
                 <option disabled selected>Hva gjelder det?</option>
                 <option>Ekstra nøkkel</option>
                 <option>Mistet alle nøkler</option>
@@ -150,10 +159,10 @@
                 <option>Diagnose</option>
             </select>
 
-            <textarea name="message" placeholder="Beskrivelse" rows="5"
-                      class="w-full p-3 bg-stone-950 rounded-lg"></textarea>
+            <textarea name="message" rows="5" placeholder="Beskrivelse"
+                      class="w-full p-3 bg-stone-950 rounded-lg text-white"></textarea>
 
-            <button class="w-full bg-emerald-600 text-black font-bold py-4 rounded-xl">
+            <button type="submit" class="w-full bg-emerald-600 text-black font-bold py-4 rounded-xl">
                 Send forespørsel
             </button>
 
@@ -208,9 +217,7 @@
         </div>
 
         <p class="text-xs text-stone-500 text-center mt-6 italic">
-        
-         * Prisene er "fra-priser" grunnet variasjon i bil og kompleksitet.
-            
+            * Fra-priser varierer basert på bil og kompleksitet.
         </p>
 
     </div>
