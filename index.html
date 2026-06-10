@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECU Solutions Haugesund - Bilnøkler og Startproblemer</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <style>
         .hero-bg {
             background-image: url('bakgrunnn.jpg');
@@ -14,7 +14,7 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        
+
         .hero-overlay {
             background-color: rgba(17, 17, 17, 0.85);
         }
@@ -35,32 +35,25 @@
 <!-- HERO -->
 <header class="hero-bg relative min-h-screen flex items-center justify-center border-b border-stone-800">
     <div class="hero-overlay absolute inset-0"></div>
-    
+
     <div class="relative z-10 text-center px-4 max-w-5xl">
 
         <a href="https://maps.google.com" target="_blank"
-           class="inline-flex items-center gap-2 text-stone-600 bg-stone-900 border border-stone-800 rounded-full px-5 py-2 mb-12 hover:text-stone-300 transition-colors">
+           class="inline-flex items-center gap-2 text-stone-400 bg-stone-900 border border-stone-800 rounded-full px-5 py-2 mb-10">
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2" class="w-4 h-4 text-emerald-500 blinking-location">
-                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0Z"/>
-                <circle cx="12" cy="10" r="3"/>
-            </svg>
-
-            <span class="text-sm font-medium">
-                Basert i <span class="font-bold blinking-location">HAUGESUND & OMEGN</span>
-            </span>
+            <span class="text-emerald-400">📍</span>
+            Basert i <span class="font-bold blinking-location ml-1">HAUGESUND & OMEGN</span>
         </a>
 
-        <h1 class="text-6xl md:text-7xl font-bold text-stone-50 mb-6">
+        <h1 class="text-6xl md:text-7xl font-bold text-white mb-6">
             ECU Solutions <span class="block">Haugesund</span>
         </h1>
 
-        <p class="text-xl md:text-2xl text-stone-400 mb-12 max-w-3xl mx-auto">
-            Bilnøkler, ECU/TCU og feilsøking
+        <p class="text-xl text-stone-400 max-w-3xl mx-auto mb-10">
+            Bilnøkler, ECU/TCU programmering, feilsøking og nøkkelservice
         </p>
 
-        <div class="flex gap-4 justify-center">
+        <div class="flex gap-4 justify-center flex-wrap">
             <a href="#kontakt" class="bg-emerald-600 text-black font-bold px-8 py-4 rounded-xl">
                 Ta kontakt
             </a>
@@ -72,34 +65,65 @@
     </div>
 </header>
 
-<!-- INFO (BEHOLDT) -->
-<section class="py-24 px-4 bg-stone-900">
+<!-- INFO -->
+<section class="py-24 px-4 bg-stone-900 border-t border-stone-800">
     <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold text-white mb-12 text-center">Hva vi kan tilby</h2>
 
-        <div class="grid md:grid-cols-2 gap-10 text-stone-300">
-            <p>Vi jobber med bilnøkler, ECU og avansert feilsøking...</p>
-            <p>Vi bruker profesjonelt utstyr og tilbyr raske løsninger...</p>
+        <h2 class="text-4xl font-extrabold text-white mb-16 text-center">
+            Hva vi kan tilby
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-12 text-stone-300 text-lg">
+
+            <div>
+                <p class="mb-6">
+                    Vi i <strong>ECU Solutions Haugesund</strong> satser tungt på bilnøkler fremover.
+                    Vi kan tilby veldig billige løsninger, men alt varierer av bil, ønske og oppbygning.
+                </p>
+
+                <p class="mb-6">
+                    For noen biler må flere moduler ut for å programmeres på benk,
+                    mens andre løses rett gjennom OBD-porten.
+                    Vi bruker profesjonelt utstyr som <strong>AUTEL IM & XP400 PRO</strong>
+                    og <strong>Lonsdor K518pro & Kprog2</strong>.
+                </p>
+            </div>
+
+            <div>
+                <p class="mb-6">
+                    Vi har erfaring med TCU cloning, ECU-jobber og avansert diagnose.
+                </p>
+
+                <p class="mb-6">
+                    Vi kan også tilbakestille systemer til original stand.
+                    Leveringstid varierer siden vi ikke har fast delelager.
+                </p>
+
+                <p class="text-sm text-stone-500 italic mt-6">
+                    * Prisene er "fra-priser" grunnet variasjon i bil og kompleksitet.
+                </p>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- KONTAKT (FIXED FORMSPREE) -->
+<!-- KONTAKT -->
 <section id="kontakt" class="py-24 px-4 bg-stone-950">
     <div class="max-w-xl mx-auto">
 
-        <h2 class="text-4xl font-bold text-white mb-12 text-center">
+        <h2 class="text-4xl font-bold text-white text-center mb-12">
             Få tilbud
         </h2>
 
         <form action="https://formspree.io/f/xbdlnobn" method="POST"
-              class="space-y-6 bg-stone-900 border border-stone-800 p-8 rounded-3xl">
+              class="space-y-5 bg-stone-900 border border-stone-800 p-8 rounded-3xl">
 
-            <input type="text" name="name" placeholder="Navn" required class="w-full p-3 bg-stone-950 rounded-lg">
+            <input name="name" placeholder="Navn" required class="w-full p-3 bg-stone-950 rounded-lg">
 
-            <input type="text" name="regnr" placeholder="Regnr (anbefalt)" required class="w-full p-3 bg-stone-950 rounded-lg">
+            <input name="regnr" placeholder="Regnr (anbefalt)" class="w-full p-3 bg-stone-950 rounded-lg">
 
-            <input type="text" name="car_info" placeholder="Bil (merke/modell/motor/år)" required class="w-full p-3 bg-stone-950 rounded-lg">
+            <input name="car" placeholder="Bil (merke/modell/år/motor)" required class="w-full p-3 bg-stone-950 rounded-lg">
 
             <div class="grid grid-cols-2 gap-4">
 
@@ -117,19 +141,21 @@
 
             </div>
 
-            <input type="text" name="fcc_id" placeholder="FCC ID (valgfritt)" class="w-full p-3 bg-stone-950 rounded-lg">
+            <input name="fccid" placeholder="FCC ID (valgfritt)" class="w-full p-3 bg-stone-950 rounded-lg">
 
-            <select name="request_type" required class="w-full p-3 bg-stone-950 rounded-lg">
+            <select name="request" class="w-full p-3 bg-stone-950 rounded-lg" required>
                 <option disabled selected>Hva gjelder det?</option>
                 <option>Ekstra nøkkel</option>
                 <option>Mistet alle nøkler</option>
                 <option>Nøkkelprogrammering</option>
-                <option>ECU/TCU</option>
+                <option>ECU / TCU</option>
+                <option>Diagnose</option>
             </select>
 
-            <textarea name="message" rows="6" placeholder="Beskrivelse" class="w-full p-3 bg-stone-950 rounded-lg"></textarea>
+            <textarea name="message" placeholder="Beskrivelse" rows="5"
+                      class="w-full p-3 bg-stone-950 rounded-lg"></textarea>
 
-            <button type="submit" class="w-full bg-emerald-600 text-black font-bold py-4 rounded-xl">
+            <button class="w-full bg-emerald-600 text-black font-bold py-4 rounded-xl">
                 Send forespørsel
             </button>
 
@@ -137,25 +163,27 @@
     </div>
 </section>
 
-<!-- PRISLISTE (FASTPRIS GRØNN BEHOLDT) -->
-<section id="priser" class="py-24 px-4 bg-stone-900">
+<!-- PRISLISTE -->
+<section id="priser" class="py-24 px-4 bg-stone-900 border-t border-stone-800">
     <div class="max-w-3xl mx-auto">
 
-        <h2 class="text-4xl font-bold text-white text-center mb-10">Prisliste</h2>
+        <h2 class="text-4xl font-bold text-white text-center mb-10">
+            Prisliste
+        </h2>
 
         <div class="bg-stone-950 border border-stone-800 rounded-3xl divide-y divide-stone-800">
 
             <div class="p-6 flex justify-between">
                 <span>FRM modul BMW</span>
                 <span class="text-emerald-400 bg-emerald-950 px-4 py-1 rounded-xl border border-emerald-900 font-bold">
-                    3000,- (Fastpris)
+                    3000,- Fastpris
                 </span>
             </div>
 
             <div class="p-6 flex justify-between">
                 <span>Batteri & ladesjekk</span>
                 <span class="text-emerald-400 bg-emerald-950 px-4 py-1 rounded-xl border border-emerald-900 font-bold">
-                    400,- (Fastpris)
+                    400,- Fastpris
                 </span>
             </div>
 
@@ -180,6 +208,10 @@
             </div>
 
         </div>
+
+        <p class="text-xs text-stone-500 text-center mt-6 italic">
+            * Fra-priser varierer basert på bil og kompleksitet.
+        </p>
 
     </div>
 </section>
