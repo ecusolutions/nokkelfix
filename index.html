@@ -1,77 +1,176 @@
-<form action="https://formspree.io/f/mqazqazl" method="POST" class="space-y-8 bg-stone-950 border border-stone-800 rounded-3xl p-10 shadow-2xl">
+<!DOCTYPE html>
+<html lang="no">
 
-    <input type="hidden" name="_to" value="ecuhjelpen@gmail.com">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECU Solutions Haugesund - Bilnøkler og Startproblemer</title>
 
-    <!-- NAVN -->
-    <div>
-        <label class="block text-sm font-semibold text-stone-300 mb-2">Ditt navn:</label>
-        <input type="text" name="name" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .hero-bg {
+            background-image: url('bakgrunnn.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-overlay {
+            background-color: rgba(17, 17, 17, 0.85);
+        }
+
+        @keyframes pulse-light {
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+                color: rgba(255, 255, 255, 0.6);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+
+        .blinking-location {
+            animation: pulse-light 1.5s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-stone-950 text-stone-200 font-sans antialiased">
+
+<header class="hero-bg relative min-h-screen flex items-center justify-center border-b border-stone-800">
+    <div class="hero-overlay absolute inset-0"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-5xl">
+        <a href="https://maps.google.com" target="_blank"
+           class="inline-flex items-center gap-2 text-stone-600 bg-stone-900 border border-stone-800 rounded-full px-5 py-2 mb-12 hover:border-stone-700 hover:text-stone-300 transition-colors">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="w-4 h-4 text-emerald-500 blinking-location">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+            </svg>
+
+            <span class="text-sm font-medium">Basert i <span class="font-bold blinking-location">HAUGESUND & OMEGN</span>. Trykk for kart.</span>
+        </a>
+
+        <h1 class="text-6xl md:text-7xl font-bold text-stone-50 mb-6 leading-tight tracking-tight">
+            ECU Solutions <span class="block">Haugesund</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-stone-400 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <span class="font-semibold text-stone-200">Vi spesialiserer oss nå på bilnøkler, feilsøking og mer.</span><br>
+            Vi har utstyr til ECU/TCU-jobber og nøkkelprogrammering.
+        </p>
     </div>
+</header>
 
-    <!-- BIL INFO -->
-    <div>
-        <label class="block text-sm font-semibold text-stone-300 mb-2">Regnr (viktig):</label>
-        <input type="text" name="regnr" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+<!-- ================= KONTAKT (OPPDATERT) ================= -->
+<section id="kontakt" class="py-24 px-4 bg-stone-900 border-t border-stone-800">
+    <div class="max-w-xl mx-auto">
+
+        <h2 class="text-4xl font-extrabold text-stone-50 mb-16 text-center tracking-tight">
+            Få et uforpliktende pristilbud
+        </h2>
+
+        <form action="https://formspree.io/f/mqazqazl" method="POST"
+              class="space-y-8 bg-stone-950 border border-stone-800 rounded-3xl p-10 shadow-2xl">
+
+            <input type="hidden" name="_to" value="ecuhjelpen@gmail.com">
+
+            <!-- NAVN -->
+            <div>
+                <label class="block text-sm font-semibold text-stone-300 mb-2">Ditt navn:</label>
+                <input type="text" name="name" required
+                       class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+            </div>
+
+            <!-- REGNR -->
+            <div>
+                <label class="block text-sm font-semibold text-stone-300 mb-2">Regnr (anbefalt):</label>
+                <input type="text" name="regnr" required
+                       class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+            </div>
+
+            <!-- BIL INFO -->
+            <div>
+                <label class="block text-sm font-semibold text-stone-300 mb-2">Bil (merke, modell, motor, årsmodell):</label>
+                <input type="text" name="car_info" required
+                       class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3"
+                       placeholder="Eks: Audi A4 2.0 TDI 2015">
+            </div>
+
+            <!-- KEYLESS -->
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div>
+                    <label class="block text-sm font-semibold text-stone-300 mb-2">Keyless start:</label>
+                    <select name="keyless_start" required
+                            class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+                        <option value="" disabled selected>Velg...</option>
+                        <option value="ja">Ja</option>
+                        <option value="nei">Nei</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-stone-300 mb-2">Keyless entry:</label>
+                    <select name="keyless_entry" required
+                            class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+                        <option value="" disabled selected>Velg...</option>
+                        <option value="ja">Ja</option>
+                        <option value="nei">Nei</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- FCC ID -->
+            <div>
+                <label class="block text-sm font-semibold text-stone-300 mb-2">FCC ID (valgfritt):</label>
+                <input type="text" name="fcc_id"
+                       class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3"
+                       placeholder="Står ofte inni nøkkelen">
+            </div>
+
+            <!-- TYPE JOBB -->
+            <div>
+                <label class="block text-sm font-semibold text-stone-300 mb-2">Hva gjelder saken?</label>
+                <select name="request_type" required
+                        class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+
+                    <option value="" disabled selected>Velg...</option>
+                    <option value="ekstranokkel">Ekstra nøkkel</option>
+                    <option value="mistet">Mistet alle nøkler</option>
+                    <option value="programmering">Nøkkelprogrammering</option>
+                    <option value="diagnose">Diagnose / feilsøking</option>
+                    <option value="ecu_tcu">ECU / TCU jobb</option>
+                    <option value="annet">Annet</option>
+
+                </select>
+            </div>
+
+            <!-- BESKRIVELSE -->
+            <div>
+                <label class="block text-sm font-semibold text-stone-300 mb-2">Beskrivelse:</label>
+                <textarea name="message" rows="6"
+                          class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3"
+                          placeholder="Beskriv problemet så detaljert som mulig..."></textarea>
+            </div>
+
+            <!-- SEND -->
+            <button type="submit"
+                    class="w-full inline-flex items-center justify-center gap-3 bg-emerald-600 text-stone-950 font-bold px-12 py-5 rounded-xl text-lg hover:bg-emerald-500 transition-colors shadow-xl">
+
+                Send forespørsel
+            </button>
+
+        </form>
+
     </div>
+</section>
 
-    <div>
-        <label class="block text-sm font-semibold text-stone-300 mb-2">Bil (merke, modell, motor, årsmodell):</label>
-        <input type="text" name="car_info" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3" placeholder="Eks: BMW 320d 2.0 2016">
-    </div>
-
-    <!-- KEYLESS -->
-    <div class="grid md:grid-cols-2 gap-6">
-
-        <div>
-            <label class="block text-sm font-semibold text-stone-300 mb-2">Keyless start:</label>
-            <select name="keyless_start" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
-                <option value="" disabled selected>Velg...</option>
-                <option value="ja">Ja</option>
-                <option value="nei">Nei</option>
-            </select>
-        </div>
-
-        <div>
-            <label class="block text-sm font-semibold text-stone-300 mb-2">Keyless entry (dører):</label>
-            <select name="keyless_entry" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
-                <option value="" disabled selected>Velg...</option>
-                <option value="ja">Ja</option>
-                <option value="nei">Nei</option>
-            </select>
-        </div>
-
-    </div>
-
-    <!-- FCC ID -->
-    <div>
-        <label class="block text-sm font-semibold text-stone-300 mb-2">FCC ID (valgfritt – står ofte inni nøkkel):</label>
-        <input type="text" name="fcc_id" class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3" placeholder="Eks: N5F-A04TAA">
-    </div>
-
-    <!-- TYPE JOBB -->
-    <div>
-        <label class="block text-sm font-semibold text-stone-300 mb-2">Hva gjelder saken?</label>
-        <select name="request_type" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
-            <option value="" disabled selected>Velg...</option>
-            <option value="ekstranokkel">Ekstra nøkkel</option>
-            <option value="mistet_nokkel">Mistet alle nøkler</option>
-            <option value="programmering">Nøkkelprogrammering</option>
-            <option value="diagnose">Diagnose / feilsøking</option>
-            <option value="ecu_tcu">ECU / TCU jobb</option>
-            <option value="annet">Annet</option>
-        </select>
-    </div>
-
-    <!-- BESKRIVELSE -->
-    <div>
-        <label class="block text-sm font-semibold text-stone-300 mb-2">Beskrivelse:</label>
-        <textarea name="message" rows="6" class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3"
-        placeholder="Beskriv problemet så detaljert som mulig..."></textarea>
-    </div>
-
-    <!-- SUBMIT -->
-    <button type="submit" class="w-full inline-flex items-center justify-center gap-3 bg-emerald-600 text-stone-950 font-bold px-12 py-5 rounded-xl text-lg hover:bg-emerald-500 transition-colors shadow-xl">
-        Send forespørsel
-    </button>
-
-</form>
+</body>
+</html>
