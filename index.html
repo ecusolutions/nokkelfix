@@ -1,204 +1,77 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECU Solutions Haugesund - Bilnøkler og Startproblemer</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <style>
-        .hero-bg {
-            background-image: url('bakgrunnn.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        .hero-overlay {
-            background-color: rgba(17, 17, 17, 0.85);
-        }
+<form action="https://formspree.io/f/mqazqazl" method="POST" class="space-y-8 bg-stone-950 border border-stone-800 rounded-3xl p-10 shadow-2xl">
 
-        /* Blink-animasjon for "Haugesund" */
-        @keyframes pulse-light {
-            0%, 100% {
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-                color: rgba(255, 255, 255, 0.6);
-            }
-            50% {
-                text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-                color: rgba(255, 255, 255, 1);
-            }
-        }
-        .blinking-location {
-            animation: pulse-light 1.5s infinite;
-        }
-    </style>
-</head>
-<body class="bg-stone-950 text-stone-200 font-sans antialiased">
+    <input type="hidden" name="_to" value="ecuhjelpen@gmail.com">
 
-    <header class="hero-bg relative min-h-screen flex items-center justify-center border-b border-stone-800">
-        <div class="hero-overlay absolute inset-0"></div>
-        
-        <div class="relative z-10 text-center px-4 max-w-5xl">
-            <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-2 text-stone-600 bg-stone-900 border border-stone-800 rounded-full px-5 py-2 mb-12 hover:border-stone-700 hover:text-stone-300 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-emerald-500 blinking-location"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span class="text-sm font-medium">Basert i <span class="font-bold blinking-location">HAUGESUND & OMEGN</span>. Trykk for kart.</span>
-            </a>
+    <!-- NAVN -->
+    <div>
+        <label class="block text-sm font-semibold text-stone-300 mb-2">Ditt navn:</label>
+        <input type="text" name="name" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+    </div>
 
-            <h1 class="text-6xl md:text-7xl font-bold text-stone-50 mb-6 leading-tight tracking-tight">
-                ECU Solutions <span class="block">Haugesund</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-stone-400 mb-12 leading-relaxed max-w-3xl mx-auto">
-                <span class="font-semibold text-stone-200">Vi spesialiserer oss nå på bilnøkler, feilsøking og mer.</span><br>
-                Vi har utstyr til å gjøre både nøkkelprogrammering og ECU/TCU-jobber.
-                Vi har også utstyr til å gjøre recovery av FRM-moduler i BMW som er kjent for å bli korrupte. Har du problemer med å låse bil, åpne og lukke vindu, lysstyring og en del varsler i dashbordet, er det som regel FRM-modulen i din bmw som er problemet.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <a href="#kontakt" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 text-stone-950 font-bold px-12 py-5 rounded-2xl text-lg hover:bg-emerald-500 transition-colors shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-                    Ta kontakt for tilbud
-                </a>
-            </div>
+    <!-- BIL INFO -->
+    <div>
+        <label class="block text-sm font-semibold text-stone-300 mb-2">Regnr (viktig):</label>
+        <input type="text" name="regnr" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+    </div>
+
+    <div>
+        <label class="block text-sm font-semibold text-stone-300 mb-2">Bil (merke, modell, motor, årsmodell):</label>
+        <input type="text" name="car_info" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3" placeholder="Eks: BMW 320d 2.0 2016">
+    </div>
+
+    <!-- KEYLESS -->
+    <div class="grid md:grid-cols-2 gap-6">
+
+        <div>
+            <label class="block text-sm font-semibold text-stone-300 mb-2">Keyless start:</label>
+            <select name="keyless_start" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+                <option value="" disabled selected>Velg...</option>
+                <option value="ja">Ja</option>
+                <option value="nei">Nei</option>
+            </select>
         </div>
-    </header>
 
-    <section class="py-24 px-4 bg-stone-900 border-t border-stone-800">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-stone-50 mb-16 text-center tracking-tight">Hva vi kan tilby</h2>
-            
-            <div class="grid md:grid-cols-2 gap-12 text-lg text-stone-300 leading-relaxed">
-                <div>
-                    <p class="mb-6">Vi i <strong>ECU Solutions Haugesund</strong> satser tungt på bilnøkler fremover. Vi kan tilby veldig billige løsninger, men alt varierer av bil, ønske og oppbygning.</p>
-                    <p class="mb-6">For noen biler må flere moduler ut for å programmers på benk, mens andre løses rett gjennom bilens OBD-port. Vi har investert i profesjonelt utstyr som blant annet <strong>AUTEL IM & XP400 PRO</strong> og <strong>Lonsdor K518pro & Kprog2</strong> for å håndtere disse systemene så trygt som mulig.</p>
-                </div>
-                <div>
-                    <p class="mb-6">Vi har erfaring med mer enn bare nøkler – vi har blant annet clonet TCU (girkassestyring) før, og kan utføre diverse programvare- og diagnoseservicer på bilens elektronikk.</p>
-                    <p class="mb-6">Vi kan også tilbakestille bilen tilbake til original og mer, alt etter dine behov. Siden vi ikke sitter på et fast delelager, kan noen nøkler ta flere uker å bestille inn, mens det for andre biler kan brukes universale nøkler.</p>
-                </div>
-            </div>
+        <div>
+            <label class="block text-sm font-semibold text-stone-300 mb-2">Keyless entry (dører):</label>
+            <select name="keyless_entry" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+                <option value="" disabled selected>Velg...</option>
+                <option value="ja">Ja</option>
+                <option value="nei">Nei</option>
+            </select>
         </div>
-    </section>
 
-    <section class="py-24 px-4 bg-stone-950 border-t border-stone-900">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-stone-50 mb-4 text-center tracking-tight">Prisliste</h2>
-            <p class="text-stone-400 text-center mb-12 max-w-xl mx-auto">Vennligst merk at de fleste priser er veiledende startpriser. Ta kontakt for et nøyaktig pristilbud til akkurat din bil.</p>
-            
-            <div class="bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden shadow-xl mb-12">
-                <div class="divide-y divide-stone-800">
-                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
-                        <span class="font-medium text-stone-200">FRM Modul reparasjon (BMW)</span>
-                        <span class="font-bold text-emerald-400 bg-emerald-950/50 border border-emerald-900/50 px-4 py-1.5 rounded-xl text-sm">3 000,- kr (Fastpris)</span>
-                    </div>
-                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
-                        <div>
-                            <span class="font-medium text-stone-200 block">Diagnose & Feilsøking</span>
-                            <span class="text-xs text-stone-400 block mt-0.5">Enkel avlesning 600,- kr. Livedata og avansert feilsøking øker i pris etter tidsbruk.</span>
-                        </div>
-                        <span class="font-semibold text-stone-300 shrink-0 ml-4">Fra 600,- kr</span>
-                    </div>
-                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
-                        <div>
-                            <span class="font-medium text-stone-200 block">Komplett Batteri- & Ladesjekk</span>
-                            <span class="text-xs text-stone-400 block mt-0.5">Inkluderer batteritest (SoH), cranktest (starttest) og ladetest. Resultatet kan tilsendes.</span>
-                        </div>
-                        <span class="font-bold text-emerald-400 bg-emerald-950/50 border border-emerald-900/50 px-4 py-1.5 rounded-xl text-sm shrink-0 ml-4">400,- kr (Fastpris)</span>
-                    </div>
-                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
-                        <span class="font-medium text-stone-200">Ekstra nøkkel med programmering</span>
-                        <span class="font-semibold text-stone-300">Fra 2 500,- kr</span>
-                    </div>
-                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
-                        <span class="font-medium text-stone-200">Mistet siste nøkkel (Ingen nøkler)</span>
-                        <span class="font-semibold text-stone-300">Fra 2 500,- kr</span>
-                    </div>
-                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
-                        <span class="font-medium text-stone-200">ECU / TCU jobb (Kloning, feilsøking o.l.)</span>
-                        <span class="font-semibold text-stone-300">Fra 2 500,- kr</span>
-                    </div>
-                    <div class="flex justify-between items-center p-6 hover:bg-stone-850 transition-colors">
-                        <span class="font-medium text-stone-200">Tilbakestilling til original programvare</span>
-                        <span class="font-semibold text-stone-300">Fra 2 500,- kr</span>
-                    </div>
-                </div>
-            </div>
+    </div>
 
-            <div class="bg-gradient-to-r from-stone-900 to-stone-850 border border-stone-800 rounded-3xl p-8 shadow-xl text-center sm:text-left sm:flex sm:items-center sm:justify-between gap-6">
-                <div class="mb-6 sm:mb-0">
-                    <h3 class="text-xl font-bold text-stone-100 mb-2 flex items-center justify-center sm:justify-start gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-500"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v11h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M13 17H9"/><path d="M14 10h-4"/></svg>
-                        Møt oss der du står? Vi kjører ut!
-                    </h3>
-                    <p class="text-sm text-stone-400 leading-relaxed max-w-xl">
-                        Står du fast eller har mistet den siste nøkkelen? Vi tilbyr utkjøring to din lokasjon. Prisen avhenger av avstand, kjøretid og oppdragets omfang.
-                    </p>
-                </div>
-                <div class="shrink-0">
-                    <span class="block text-xs uppercase tracking-wider text-stone-500 font-semibold mb-1">Utkjøringsgebyr</span>
-                    <span class="text-2xl font-black text-emerald-400 block">Fra 400,- kr</span>
-                </div>
-            </div>
+    <!-- FCC ID -->
+    <div>
+        <label class="block text-sm font-semibold text-stone-300 mb-2">FCC ID (valgfritt – står ofte inni nøkkel):</label>
+        <input type="text" name="fcc_id" class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3" placeholder="Eks: N5F-A04TAA">
+    </div>
 
-            <p class="text-xs text-stone-500 italic mt-6 text-center">
-                * Siden oppbygning, elektronikk og tidsbruk varierer veldig fra bil til bil, er prisene oppgitt som "fra-priser" (med unntak av FRM-reparasjon og batterisjekk).
-            </p>
-        </div>
-    </section>
+    <!-- TYPE JOBB -->
+    <div>
+        <label class="block text-sm font-semibold text-stone-300 mb-2">Hva gjelder saken?</label>
+        <select name="request_type" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3">
+            <option value="" disabled selected>Velg...</option>
+            <option value="ekstranokkel">Ekstra nøkkel</option>
+            <option value="mistet_nokkel">Mistet alle nøkler</option>
+            <option value="programmering">Nøkkelprogrammering</option>
+            <option value="diagnose">Diagnose / feilsøking</option>
+            <option value="ecu_tcu">ECU / TCU jobb</option>
+            <option value="annet">Annet</option>
+        </select>
+    </div>
 
-    <section id="kontakt" class="py-24 px-4 bg-stone-900 border-t border-stone-800">
-        <div class="max-w-xl mx-auto">
-            <h2 class="text-4xl font-extrabold text-stone-50 mb-16 text-center tracking-tight">Få et uforpliktende pristilbud</h2>
-            
-            <form action="https://formspree.io/f/mqazqazl" method="POST" class="space-y-8 bg-stone-950 border border-stone-800 rounded-3xl p-10 shadow-2xl">
-                <input type="hidden" name="_to" value="ecuhjelpen@gmail.com">
+    <!-- BESKRIVELSE -->
+    <div>
+        <label class="block text-sm font-semibold text-stone-300 mb-2">Beskrivelse:</label>
+        <textarea name="message" rows="6" class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3"
+        placeholder="Beskriv problemet så detaljert som mulig..."></textarea>
+    </div>
 
-                <div>
-                    <label for="name" class="block text-sm font-semibold text-stone-300 mb-2">Ditt Navn:</label>
-                    <input type="text" id="name" name="name" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
-                </div>
+    <!-- SUBMIT -->
+    <button type="submit" class="w-full inline-flex items-center justify-center gap-3 bg-emerald-600 text-stone-950 font-bold px-12 py-5 rounded-xl text-lg hover:bg-emerald-500 transition-colors shadow-xl">
+        Send forespørsel
+    </button>
 
-                <div>
-                    <label for="car-info" class="block text-sm font-semibold text-stone-300 mb-2">Bil (Merke, Modell, Årsmodell, Gjerne RegNr):</label>
-                    <input type="text" id="car-info" name="car-info" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
-                </div>
-
-                <div>
-                    <label for="request-type" class="block text-sm font-semibold text-stone-300 mb-2">Hva gjelder saken?</label>
-                    <select id="request-type" name="request-type" required class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors">
-                        <option value="" disabled selected>Velg fra listen...</option>
-                        <option value="diagnose">Diagnose / Feilsøking</option>
-                        <option value="batterisjekk">Komplett Batteri- & Ladesjekk, 400,- kr.</option>
-                        <option value="ekstranokkel">Trenger en ekstra nøkkel</option>
-                        <option value="taptnokkel">Mistet siste nøkkel</option>
-                        <option value="frm-reparasjon">FRM Modul reparasjon, 3000,- Kr.</option>
-                        <option value="tcu-ecu">ECU / TCU jobb (Kloning, feilsøking o.l.)</option>
-                        <option value="original">Tilbakestille til original</option>
-                        <option value="annet">Skriver alt manuelt selv / Annet</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="message" class="block text-sm font-semibold text-stone-300 mb-2">Beskrivelse av oppdraget:</label>
-                    <textarea id="message" name="message" rows="6" class="w-full bg-stone-900 border border-stone-800 text-stone-50 rounded-lg px-4 py-3 focus:border-emerald-600 focus:ring-emerald-600 transition-colors" placeholder="Skriv inn detaljer her..."></textarea>
-                </div>
-
-                <button type="submit" class="w-full inline-flex items-center justify-center gap-3 bg-emerald-600 text-stone-950 font-bold px-12 py-5 rounded-xl text-lg hover:bg-emerald-500 transition-colors shadow-xl">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-                    Send Forespørsel
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="py-16 px-4 bg-stone-900 border-t border-stone-800 text-center text-stone-600">
-        <p class="mb-4">© 2026 ECU Solutions Haugesund. Alle rettigheter reservert.</p>
-        <a href="https://www.facebook.com/ECUSolutionshaugesund" target="_blank" class="inline-flex items-center gap-2 text-stone-600 hover:text-emerald-400 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            Følg oss på Facebook
-        </a>
-    </footer>
-
-</body>
-</html>
+</form>
