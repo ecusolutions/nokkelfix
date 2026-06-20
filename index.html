@@ -32,11 +32,14 @@
 
 <body class="bg-stone-950 text-stone-200 font-sans antialiased">
 
+<!-- Facebook Flytende Knapp -->
 <div class="fixed right-4 bottom-4 z-50 flex items-center gap-3">
+    <!-- Tekstboble -->
     <div id="fb-message" class="hidden bg-stone-800 text-stone-200 text-xs px-4 py-2 rounded-lg border border-stone-700 shadow-xl max-w-[250px]">
         Ved problemer på nettsiden kan du gi oss så mye info du kan via vår facebook, men vi foretrekker nettsiden.
     </div>
     
+    <!-- Knapp -->
     <a id="fb-button" href="https://www.facebook.com/ECUSolutionshaugesund" target="_blank" 
        class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300">
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -45,19 +48,18 @@
     </a>
 </div>
 
-<audio id="notification-sound" src="https://actions.google.com/sounds/v1/ui/notification_outline.ogg"></audio>
-
 <script>
     setTimeout(() => {
-        // Vis meldingen
-        document.getElementById('fb-message').classList.remove('hidden');
+        const msg = document.getElementById('fb-message');
+        const btn = document.getElementById('fb-button');
         
-        // Spill av lyden
-        const sound = document.getElementById('notification-sound');
-        sound.play().catch(e => console.log("Lyd avspilt blokkert av nettleser før brukerinteraksjon"));
+        // Viser meldingen og legger til visuell oppmerksomhet
+        msg.classList.remove('hidden');
+        btn.classList.add('animate-pulse', 'ring-4', 'ring-blue-500/50');
     }, 30000); // 30 sekunder
 </script>
 
+<!-- HERO -->
 <header class="hero-bg relative min-h-screen flex items-center justify-center border-b border-stone-800">
     <div class="hero-overlay absolute inset-0"></div>
 
@@ -89,6 +91,7 @@
     </div>
 </header>
 
+<!-- INFO -->
 <section class="py-24 px-4 bg-stone-900 border-t border-stone-800">
     <div class="max-w-6xl mx-auto">
 
@@ -128,6 +131,7 @@
     </div>
 </section>
 
+<!-- KONTAKT -->
 <section id="kontakt" class="py-24 px-4 bg-stone-950">
     <div class="max-w-xl mx-auto">
 
@@ -141,6 +145,7 @@
             <input name="name" required placeholder="Navn"
                    class="w-full p-3 bg-stone-950 rounded-lg text-white">
 
+            <!-- EMAIL (KRITISK) -->
             <input type="email" name="email" required placeholder="E-post (påkrevd)"
                    class="w-full p-3 bg-stone-950 rounded-lg text-white border border-stone-700 focus:border-emerald-500">
 
@@ -189,6 +194,7 @@
     </div>
 </section>
 
+<!-- PRISLISTE -->
 <section id="priser" class="py-24 px-4 bg-stone-900 border-t border-stone-800">
     <div class="max-w-3xl mx-auto">
 
