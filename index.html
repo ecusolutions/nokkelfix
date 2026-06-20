@@ -45,10 +45,17 @@
     </a>
 </div>
 
+<audio id="notification-sound" src="https://actions.google.com/sounds/v1/ui/notification_outline.ogg"></audio>
+
 <script>
     setTimeout(() => {
+        // Vis meldingen
         document.getElementById('fb-message').classList.remove('hidden');
-    }, 30000); // Viser meldingen etter 30 sekunder
+        
+        // Spill av lyden
+        const sound = document.getElementById('notification-sound');
+        sound.play().catch(e => console.log("Lyd avspilt blokkert av nettleser før brukerinteraksjon"));
+    }, 30000); // 30 sekunder
 </script>
 
 <header class="hero-bg relative min-h-screen flex items-center justify-center border-b border-stone-800">
